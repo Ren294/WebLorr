@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5GUYS Project Team</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+          to right,
+          #e0c3fc,
+          #8ec5fc
+        ); /* Tím nhạt sang xanh nhạt */
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      nav ul li {
+        display: inline;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 20px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+      }
+
+      nav ul li a:hover {
+        background: #e8491d;
+        color: #fff;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background: #333;
+        padding-top: 20px;
+        box-sizing: border-box;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        margin: 20px 0;
+      }
+
+      .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+      }
+
+      .sidebar ul li a:hover {
+        background: #575757;
+      }
+
+      .submenu {
+        display: none;
+        padding-left: 30px;
+        margin-top: 00px;
+        background-color: #666;
+        transition: margin-top 0.3s ease;
+      }
+
+      main {
+        margin-left: 220px;
+        padding: 20px;
+      }
+
+      .overview {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .card {
+        background: #444;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 23%;
+      }
+
+      .card h3 {
+        margin: 0;
+        padding-bottom: 10px;
+      }
+
+      .card p {
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      h3,
+      h4 {
+        color: #555;
+      }
+
+      a {
+        color: #1e90ff;
+        text-decoration: none;
+      }
+
+      .sidebar ul li.active {
+        font-weight: bold;
+        background: #444;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>5GUYS</h1>
+        <nav>
+          <ul>
+            <li><a href="#algorithms">Algorithms</a></li>
+            <li><a href="#data">Data</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="sidebar">
+      <ul id="sidebarMenu">
+        <li><a href="#data" onclick="toggleSubmenu('dataSubmenu')">Data</a></li>
+
+        <li><a href="#algorithm">Algorithm</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </div>
+    <main>
+      <div class="container">
+        <div class="overview">
+          <div class="card">
+            <h3>Rows & Attributes</h3>
+            <p>1061 x 14</p>
+          </div>
+          <div class="card">
+            <h3>Views</h3>
+            <p>108199</p>
+          </div>
+          <div class="card">
+            <h3>Downloads</h3>
+            <p>14553</p>
+          </div>
+          <div class="card">
+            <h3>Upvotes</h3>
+            <p>353</p>
+          </div>
+        </div>
+        <h2>Africa Economic, Banking and Systemic Crisis Data</h2>
+        <p>
+          Datamage on Economic and Financial crises in 13 African Countries
+          (1860 to 2014)
+        </p>
+        <p>
+          <a
+            href="https://www.kaggle.com/datasets/chirin/africa-economic-banking-and-systemic-crisis-data"
+            >https://www.kaggle.com/datasets/chirin/africa-economic-banking-and-systemic-crisis-data</a
+          >
+        </p>
+        <img src="path/to/image.jpg" alt="Africa Economic Crisis" />
+        <h3>About Dataset</h3>
+        <h4>Context</h4>
+        <p>
+          This dataset is a derivative of Reinhart et. al’s Global Financial
+          Stability dataset. The dataset will be valuable to those who seek to
+          understand the dynamics of financial stability within the African
+          context.
+        </p>
+        <h4>Content</h4>
+        <p>
+          The dataset specifically focuses on the Banking, Debt, Financial,
+          Inflation and Systemic Crises that occurred, from 1860 to 2014, in 13
+          African countries, including: Algeria, Angola, Central African
+          Republic, Ivory Coast, Egypt, Kenya, Mauritius, Morocco, Nigeria,
+          South Africa, Tunisia, Zambia and Zimbabwe.
+        </p>
+        <h4>Inspiration</h4>
+        <p>
+          My inspiration stems from two questions: "Which factors are most
+          associated with Systemic Crises in Africa?" and "At what frequency do
+          these factors occur in Africa compared to other continents?"
+        </p>
+      </div>
+    </main>
+    <script>
+      // script.js
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Code here if needed.
+      });
+
+      function toggleSubmenu(submenuId) {
+        var submenu = document.getElementById(submenuId);
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
